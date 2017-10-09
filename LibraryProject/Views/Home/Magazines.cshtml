@@ -1,0 +1,34 @@
+﻿@model LibraryProject.ViewModels.MagazineFilterModel
+
+@{
+    ViewBag.Title = "Magazines";
+}
+<h4>Magazines</h4>
+<div id="example">
+    <div id="grid-magazine"></div>
+    <div id="details"></div>
+    @Scripts.Render("~/bundles/MagazinesKendoJScript")
+    <script>
+        var magazineList = @Html.Raw(Json.Encode(Model.Magazines));
+        var magazinesPublishers = @Html.Raw(Json.Encode(Model.MagazinesPublisher.Items));
+        var userRole = @Html.Raw(Json.Encode(User.IsInRole("admin")));
+        MagazineAction(magazineList, magazinesPublishers, userRole);
+    </script>
+
+    <script type="text/x-kendo-template" id="magazine-template">
+        <div id="details-container">
+            <dl>
+                <dt>Name:</dt>
+                <dd>#= Name #</dd>
+                <dt>Category:</dt>
+                <dd>#= Category #</dd>
+                <dt>Publisher:</dt>
+                <dd>#= Publisher #</dd>
+                <dt>Price:</dt>
+                <dd>#= Price#</dd>
+            </dl>
+        </div>
+    </script>
+    @Html.ActionLink("Save txt list", "SaveMagazinesTxtList", new { }, new { @class = "btn btn-sm btn-primary db-saver " })
+    @Html.ActionLink("Save xml list", "SaveMagazinesXmlList", new { }, new { @class = "btn btn-sm btn-primary db-saver " })
+</div>

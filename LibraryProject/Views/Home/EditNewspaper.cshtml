@@ -1,0 +1,37 @@
+﻿@using Entities.Entities;
+@model Newspaper
+@{
+    ViewBag.Title = "Edit a newspaper";
+}
+<h4>Edit a newspaper</h4>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Name, new { @class = "text-box single-line form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Category, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Category, new { @class = "text-box single-line form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Publisher, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Publisher, new { @class = "text-box single-line form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Price, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Price, new { @class = "text-box single-line form-control" })
+        </div>
+    </div>
+    <input type="submit" formaction="/Home/EditNewspaper/@Model.Id" class="btn btn-sm btn-success" value="Save">
+    @Html.ActionLink("Back to list", "Index", "Home", new { }, new { @class = "btn btn-sm btn-success" })
+}

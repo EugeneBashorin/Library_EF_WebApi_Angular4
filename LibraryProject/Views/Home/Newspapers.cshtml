@@ -1,0 +1,37 @@
+﻿@model LibraryProject.ViewModels.NewspaperFilterModel
+
+@{
+    ViewBag.Title = "Newspapers";
+}
+
+<h4>Newspapers</h4>
+<div id="example">
+    <div id="grid-newspaper"></div>
+    <div id="details"></div>
+    @Scripts.Render("~/bundles/NewspapersKendoJScript")
+    <script>
+        var newspaperList = @Html.Raw(Json.Encode(Model.Newspapers));
+        var newspapersPublishers = @Html.Raw(Json.Encode(Model.NewspapersPublisher.Items));
+        var userRole = @Html.Raw(Json.Encode(User.IsInRole("admin")));
+        NewspaperAction(newspaperList, newspapersPublishers, userRole);
+    </script>
+    <div id="newspapersViewDetails">
+    </div>
+    <script type="text/x-kendo-template" id="template">
+        <div id="details-container">
+            <dl>
+                <dt>Name:</dt>
+                <dd>#= Name #</dd>
+                <dt>Category:</dt>
+                <dd>#= Category #</dd>
+                <dt>Publisher:</dt>
+                <dd>#= Publisher #</dd>
+                <dt>Price:</dt>
+                <dd>#= Price#</dd>
+            </dl>
+        </div>
+    </script>
+    
+    @Html.ActionLink("Save txt list", "SaveNewspapersTxtList", new { }, new { @class = "btn btn-sm btn-primary button-saver" })
+    @Html.ActionLink("Save xml list", "SaveNewspapersXmlList", new { }, new { @class = "btn btn-sm btn-primary button-saver" })
+</div>
