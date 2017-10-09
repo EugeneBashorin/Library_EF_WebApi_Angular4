@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogicLayer.Interfaces;
+using BusinessLogicLayer.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,9 +11,26 @@ namespace LibraryProject.Controllers
 {
     public class ValuesController : ApiController
     {
-       // public HttpResponseMessage GetBooks(string bookPublisher)
-       // {
-       ////     return 
-       // }
+        IHomeService homeService;
+
+        public ValuesController(HomeService _homeService)
+        {
+            homeService = _homeService;
+        }
+
+        //[HttpGet]
+        //public ActionResult Books(string bookPublisher)
+        //{
+        //    BooksFilterModel bookModel = new BooksFilterModel();
+        //    InitializeBooks(bookModel);
+        //    bookModel = CheckBooksPublisher(bookModel, bookPublisher);
+
+        //    return View(bookModel);
+        //}
+
+        // public HttpResponseMessage GetBooks(string bookPublisher)
+        // {
+        ////     return 
+        // }
     }
 }

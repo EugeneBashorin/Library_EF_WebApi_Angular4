@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace DataAccessLayer.Repositories
 {
@@ -81,10 +82,10 @@ namespace DataAccessLayer.Repositories
         public List<string> GetAllPublishers()
         {
             List<string> publishersList = new List<string>();
-            var magazineList = db.Magazines;
+            var magazineList = db.Magazines.Select(magazine => magazine.Publisher).Distinct();
             foreach (var magazinesItem in magazineList)
             {
-                publishersList.Add(magazinesItem.Publisher);
+                publishersList.Add(magazinesItem);
             }
             return publishersList;
         }

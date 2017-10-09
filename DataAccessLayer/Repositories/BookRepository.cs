@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Linq;
 
 namespace DataAccessLayer.Repositories
 {
@@ -29,7 +30,7 @@ namespace DataAccessLayer.Repositories
 
         public Book GetItemById(int? id)
         {
-            Book book = db.Books.Find(id); //=new Book();
+            Book book = db.Books.Find(id);
             return book;
         }
 
@@ -80,10 +81,10 @@ namespace DataAccessLayer.Repositories
         public List<string> GetAllPublishers()
         {
             List<string> publishersList = new List<string>();
-            var bookList = db.Books;
+            var bookList = db.Books.Select(book => book.Publisher).Distinct();
             foreach (var booksItem in bookList)
             {
-                publishersList.Add(booksItem.Publisher);
+                publishersList.Add(booksItem);
             }
             return publishersList;
         }

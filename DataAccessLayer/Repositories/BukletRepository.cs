@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
+
 using System.Web;
 
 namespace DataAccessLayer.Repositories
@@ -83,10 +84,10 @@ namespace DataAccessLayer.Repositories
         public List<string> GetAllPublishers()
         {
             List<string> publishersList = new List<string>();
-            var bukletList = db.Buklets;
+            var bukletList = db.Buklets.Select(buklet => buklet.Publisher).Distinct();
             foreach (var bukletsItem in bukletList)
             {
-                publishersList.Add(bukletsItem.Publisher);
+                publishersList.Add(bukletsItem);
             }
             return publishersList;
         }
