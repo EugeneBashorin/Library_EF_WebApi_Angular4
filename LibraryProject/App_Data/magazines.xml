@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<ArrayOfMagazine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Magazine>
+    <Name>Martial Mix</Name>
+    <Price>32</Price>
+    <Publisher>Williams</Publisher>
+    <Id>31</Id>
+    <Category>Sport</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Fashion</Name>
+    <Price>20</Price>
+    <Publisher>Mag Group</Publisher>
+    <Id>32</Id>
+    <Category>Fashion</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Forbs</Name>
+    <Price>25</Price>
+    <Publisher>Stanley &amp; Co</Publisher>
+    <Id>33</Id>
+    <Category>Economic</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Geek</Name>
+    <Price>21</Price>
+    <Publisher>Stanley &amp; Co</Publisher>
+    <Id>34</Id>
+    <Category>IT</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Amaizing wild world</Name>
+    <Price>22</Price>
+    <Publisher>Stanley &amp; Co</Publisher>
+    <Id>35</Id>
+    <Category>Nature</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Braine scince</Name>
+    <Price>26</Price>
+    <Publisher>Williams</Publisher>
+    <Id>36</Id>
+    <Category>Psychology</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Car Evo</Name>
+    <Price>24</Price>
+    <Publisher>Mag Group</Publisher>
+    <Id>37</Id>
+    <Category>Car</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Robo</Name>
+    <Price>32</Price>
+    <Publisher>Stanley &amp; Co</Publisher>
+    <Id>38</Id>
+    <Category>Scince</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Zadrot</Name>
+    <Price>16</Price>
+    <Publisher>Williams</Publisher>
+    <Id>39</Id>
+    <Category>Games</Category>
+  </Magazine>
+  <Magazine>
+    <Name>Design &amp; Creative</Name>
+    <Price>30</Price>
+    <Publisher>Mag Group</Publisher>
+    <Id>40</Id>
+    <Category>Design</Category>
+  </Magazine>
+</ArrayOfMagazine>

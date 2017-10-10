@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<ArrayOfNewspaper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Newspaper>
+    <Name>The NewYork Times</Name>
+    <Price>15</Price>
+    <Publisher>Red Octouber</Publisher>
+    <Id>21</Id>
+    <Category>News</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>The WallSteet Jornal</Name>
+    <Price>12</Price>
+    <Publisher>Red Octouber</Publisher>
+    <Id>22</Id>
+    <Category>Economy</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>Ring</Name>
+    <Price>14</Price>
+    <Publisher>Ronald</Publisher>
+    <Id>23</Id>
+    <Category>Sport</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>Los Angeles Times</Name>
+    <Price>10</Price>
+    <Publisher>West-Cost</Publisher>
+    <Id>24</Id>
+    <Category>News</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>The Washington Post</Name>
+    <Price>19</Price>
+    <Publisher>Croxy</Publisher>
+    <Id>25</Id>
+    <Category>News</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>The Times</Name>
+    <Price>14</Price>
+    <Publisher>Croxy</Publisher>
+    <Id>26</Id>
+    <Category>News</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>The Guardian</Name>
+    <Price>17</Price>
+    <Publisher>West-Cost</Publisher>
+    <Id>27</Id>
+    <Category>News</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>The Daily Telegraph</Name>
+    <Price>13</Price>
+    <Publisher>Croxy</Publisher>
+    <Id>28</Id>
+    <Category>News</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>Financial Times</Name>
+    <Price>21</Price>
+    <Publisher>Red Octouber</Publisher>
+    <Id>29</Id>
+    <Category>Economy</Category>
+  </Newspaper>
+  <Newspaper>
+    <Name>Le Figaro</Name>
+    <Price>11</Price>
+    <Publisher>West-Cost</Publisher>
+    <Id>30</Id>
+    <Category>News</Category>
+  </Newspaper>
+</ArrayOfNewspaper>

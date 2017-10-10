@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book>
+    <Name>Head First C#</Name>
+    <Price>20</Price>
+    <Publisher>O.Reilly</Publisher>
+    <Id>43</Id>
+    <Author>A.Stellman, J.Greene</Author>
+  </Book>
+  <Book>
+    <Name>LINQ Succinctly</Name>
+    <Price>200</Price>
+    <Publisher>Syncfusion</Publisher>
+    <Id>44</Id>
+    <Author>J.Roberts</Author>
+  </Book>
+  <Book>
+    <Name>Java Script Patterns</Name>
+    <Price>300</Price>
+    <Publisher>O.Reilly</Publisher>
+    <Id>45</Id>
+    <Author>S.Stefanov</Author>
+  </Book>
+  <Book>
+    <Name>Head First JS Programming</Name>
+    <Price>330</Price>
+    <Publisher>O.Reilly</Publisher>
+    <Id>46</Id>
+    <Author>E.Freeman, E.Robson</Author>
+  </Book>
+  <Book>
+    <Name>SQL The Complete Reference</Name>
+    <Price>158</Price>
+    <Publisher>Williams</Publisher>
+    <Id>47</Id>
+    <Author>J.Groff, P.Weinberg, A.Oppel</Author>
+  </Book>
+  <Book>
+    <Name>Getting started with ASP.NET 5.0 Web Forms</Name>
+    <Price>400</Price>
+    <Publisher>O.Reilly</Publisher>
+    <Id>48</Id>
+    <Author>N.Gaylord, Ch.Wenz, P.Rastogi, T.Miranda</Author>
+  </Book>
+  <Book>
+    <Name>C# 6.0 Complete Guide</Name>
+    <Price>499</Price>
+    <Publisher>Williams</Publisher>
+    <Id>49</Id>
+    <Author>J.&amp; B.Albahairy</Author>
+  </Book>
+  <Book>
+    <Name>ASP.NET 4.5 in C# and VB</Name>
+    <Price>274</Price>
+    <Publisher>Wrox</Publisher>
+    <Id>50</Id>
+    <Author>J.Gaylord</Author>
+  </Book>
+  <Book>
+    <Name>Head First SQL</Name>
+    <Price>299</Price>
+    <Publisher>O.Reilly</Publisher>
+    <Id>51</Id>
+    <Author>Lynn Beighley</Author>
+  </Book>
+  <Book>
+    <Name>Design Patterns via C#</Name>
+    <Price>830</Price>
+    <Publisher>ITVDN</Publisher>
+    <Id>52</Id>
+    <Author>A.Shevchyk, A.Kasianov, D.Ohrimenko</Author>
+  </Book>
+  <Book>
+    <Name>OOP in C#. Succinctly</Name>
+    <Price>3</Price>
+    <Publisher>Syncfusion</Publisher>
+    <Id>53</Id>
+    <Author>S.Rossel</Author>
+  </Book>
+</ArrayOfBook>

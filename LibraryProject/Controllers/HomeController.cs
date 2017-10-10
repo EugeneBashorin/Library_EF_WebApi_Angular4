@@ -14,7 +14,7 @@ namespace LibraryProject.Controllers
     {
         IHomeService homeService;
 
-        public HomeController(HomeService _homeService)
+        public HomeController(IHomeService _homeService)
         {
             homeService = _homeService;
         }
@@ -127,53 +127,53 @@ namespace LibraryProject.Controllers
             return model;
         }
 
-        public ActionResult SaveBooksTxtList()
-        {
-            homeService.GetBooksTxtList();
-            return RedirectToAction("Books");
-        }
+        //public ActionResult SaveBooksTxtList()
+        //{
+        //    homeService.GetBooksTxtList();
+        //    return RedirectToAction("Books");
+        //}
 
-        public ActionResult SaveBooksXmlList()
-        {
-            homeService.GetBooksXmlList();
-            return RedirectToAction("Books");
-        }
+        //public ActionResult SaveBooksXmlList()
+        //{
+        //    homeService.GetBooksXmlList();
+        //    return RedirectToAction("Books");
+        //}
 
-        public ActionResult SaveBukletsTxtList()
-        {
-            homeService.GetBukletsTxtList();
-            return RedirectToAction("Buklets");
-        }
+        //public ActionResult SaveBukletsTxtList()
+        //{
+        //    homeService.GetBukletsTxtList();
+        //    return RedirectToAction("Buklets");
+        //}
 
-        public ActionResult SaveBukletsXmlList()
-        {
-            homeService.GetBukletsXmlList();
-            return RedirectToAction("Buklets");
-        }
+        //public ActionResult SaveBukletsXmlList()
+        //{
+        //    homeService.GetBukletsXmlList();
+        //    return RedirectToAction("Buklets");
+        //}
 
-        public ActionResult SaveNewspapersTxtList()
-        {
-            homeService.GetNewspapersTxtList();
-            return RedirectToAction("Newspapers");
-        }
+        //public ActionResult SaveNewspapersTxtList()
+        //{
+        //    homeService.GetNewspapersTxtList();
+        //    return RedirectToAction("Newspapers");
+        //}
 
-        public ActionResult SaveNewspapersXmlList()
-        {
-            homeService.GetNewspapersXmlList();
-            return RedirectToAction("Newspapers");
-        }
+        //public ActionResult SaveNewspapersXmlList()
+        //{
+        //    homeService.GetNewspapersXmlList();
+        //    return RedirectToAction("Newspapers");
+        //}
 
-        public ActionResult SaveMagazinesTxtList()
-        {
-            homeService.GetMagazinesTxtList();
-            return RedirectToAction("Magazines");
-        }
+        //public ActionResult SaveMagazinesTxtList()
+        //{
+        //    homeService.GetMagazinesTxtList();
+        //    return RedirectToAction("Magazines");
+        //}
 
-        public ActionResult SaveMagazinesXmlList()
-        {
-            homeService.GetMagazinesXmlList();
-            return RedirectToAction("Magazines");
-        }
+        //public ActionResult SaveMagazinesXmlList()
+        //{
+        //    homeService.GetMagazinesXmlList();
+        //    return RedirectToAction("Magazines");
+        //}
 
         [HttpPost]
         [Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]

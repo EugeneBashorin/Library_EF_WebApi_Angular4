@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ArrayOfBuklet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Buklet>
+    <Name>Stuff managment</Name>
+    <Price>6</Price>
+    <Publisher>Clear Glasses </Publisher>
+    <Id>1</Id>
+    <Author>D. Cornegi</Author>
+  </Buklet>
+  <Buklet>
+    <Name>Great trick</Name>
+    <Price>12</Price>
+    <Publisher>Clinton Family</Publisher>
+    <Id>2</Id>
+    <Author>D. Trump</Author>
+  </Buklet>
+  <Buklet>
+    <Name>Great EGO</Name>
+    <Price>10</Price>
+    <Publisher>Trump Corp</Publisher>
+    <Id>3</Id>
+    <Author>H. Clinton</Author>
+  </Buklet>
+  <Buklet>
+    <Name>The RocketMan</Name>
+    <Price>10</Price>
+    <Publisher>Korean Dogs</Publisher>
+    <Id>5</Id>
+    <Author>Kim chen In</Author>
+  </Buklet>
+</ArrayOfBuklet>

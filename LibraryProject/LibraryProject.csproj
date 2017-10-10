@@ -1933,6 +1933,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Util\NinjectDependencyScope.cs" />
     <Compile Include="ViewModels\BukletsFilterModel.cs" />
     <Compile Include="ViewModels\BooksFilterModel.cs" />
     <Compile Include="ViewModels\LoginModel.cs" />
@@ -3000,6 +3001,10 @@
     <ProjectReference Include="..\ConfigurationData\ConfigurationData.csproj">
       <Project>{0822c836-933a-4b24-8a7f-964b39c72601}</Project>
       <Name>ConfigurationData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{5D957463-D349-4ABC-8F1F-3C6C770940CF}</Project>
+      <Name>DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{a3d4f3c3-b33a-4d71-bf7d-ce68dc5ab9e1}</Project>

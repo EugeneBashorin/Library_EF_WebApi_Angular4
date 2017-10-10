@@ -13,6 +13,10 @@ namespace LibraryProject.App_Start
     using Ninject.Modules;
     using BusinessLogicLayer.Infrastructure;
     using System.Configuration;
+    using System.Web.Http;
+    using LibraryProject.Util;
+    using BusinessLogicLayer.Interfaces;
+    using BusinessLogicLayer.Services;
 
     public static class NinjectWebCommon 
     {
@@ -50,6 +54,9 @@ namespace LibraryProject.App_Start
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+
+                GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
+
                 return kernel;
             }
             catch
@@ -81,6 +88,7 @@ namespace LibraryProject.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             System.Web.Mvc.DependencyResolver.SetResolver(new LibraryProject.Util.NinjectDependencyResolver(kernel));
+            kernel.Bind<IHomeService>().To<HomeService>();
         }        
     }
 }
