@@ -11,8 +11,8 @@ namespace LibraryProject
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Books", id = UrlParameter.Optional }
+                url: "{*anything}",//"{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index"/*"Books"*/, id = UrlParameter.Optional }
             );
         }
     }

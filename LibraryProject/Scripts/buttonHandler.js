@@ -59,7 +59,6 @@ $("#SaveNewspapersXmlList").click(function (e) {
 
 $("#SaveBukletsTxtList").click(function (e) {
     e.preventDefault();
-    debugger;
     $.get(
         'api/values/SaveBukletsTxtList',
         alert("Get your list from: ~/visual studio 2015/Projects/LibraryProject/LibraryProject/App_Data/bukletList.txt")

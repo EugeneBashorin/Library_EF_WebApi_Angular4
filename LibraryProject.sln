@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationData", "ConfigurationData\ConfigurationData.csproj", "{0822C836-933A-4B24-8A7F-964B39C72601}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWebApi", "LibraryWebApi\LibraryWebApi.csproj", "{C4955F87-EFB0-46A9-90D2-A01F5E16386A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0822C836-933A-4B24-8A7F-964B39C72601}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0822C836-933A-4B24-8A7F-964B39C72601}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0822C836-933A-4B24-8A7F-964B39C72601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4955F87-EFB0-46A9-90D2-A01F5E16386A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4955F87-EFB0-46A9-90D2-A01F5E16386A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4955F87-EFB0-46A9-90D2-A01F5E16386A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4955F87-EFB0-46A9-90D2-A01F5E16386A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

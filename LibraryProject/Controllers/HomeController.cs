@@ -19,113 +19,150 @@ namespace LibraryProject.Controllers
             homeService = _homeService;
         }
 
-        [HttpGet]
-        public ActionResult Books(string bookPublisher)
+        public ActionResult Index()
         {
-            BooksFilterModel bookModel = new BooksFilterModel();
-            InitializeBooks(bookModel);
-            bookModel = CheckBooksPublisher(bookModel, bookPublisher);
-
-            return View(bookModel);
+            ViewBag.Title = "Home Page";
+            return View();
         }
 
-        [HttpGet]
-        public ActionResult Buklets(string bukletsPublisher)
-        {
-            BukletsFilterModel bukletModel = new BukletsFilterModel();
-            InitializeBuklets(bukletModel);
-            bukletModel = CheckBukletsPublisher(bukletModel, bukletsPublisher);
+        //[HttpGet]
+        //public ActionResult Books(string bookPublisher)
+        //{
+        //    BooksFilterModel bookModel = new BooksFilterModel();
+        //    InitializeBooks(bookModel);
+        //    bookModel = CheckBooksPublisher(bookModel, bookPublisher);
 
-            return View(bukletModel);
-        }
+        //    return View(bookModel);
+        //}
 
-        [HttpGet]
-        public ActionResult Magazines(string magazinePublisher)
-        {
-            MagazineFilterModel magazineModel = new MagazineFilterModel();
-            InitializeMagazines(magazineModel);
-            magazineModel = CheckMagazinesPublisher(magazineModel, magazinePublisher);
+        //[HttpGet]
+        //public ActionResult Buklets(string bukletsPublisher)
+        //{
+        //    BukletsFilterModel bukletModel = new BukletsFilterModel();
+        //    InitializeBuklets(bukletModel);
+        //    bukletModel = CheckBukletsPublisher(bukletModel, bukletsPublisher);
 
-            return View(magazineModel);
-        }
+        //    return View(bukletModel);
+        //}
 
-        [HttpGet]
-        public ActionResult Newspapers(string newspaperPublisher)
-        {
-            NewspaperFilterModel newspaperModel = new NewspaperFilterModel();
-            InitializeNewspapers(newspaperModel);
-            newspaperModel = CheckNewspapersPublisher(newspaperModel, newspaperPublisher);
+        //[HttpGet]
+        //public ActionResult Magazines(string magazinePublisher)
+        //{
+        //    MagazineFilterModel magazineModel = new MagazineFilterModel();
+        //    InitializeMagazines(magazineModel);
+        //    magazineModel = CheckMagazinesPublisher(magazineModel, magazinePublisher);
 
-            return View(newspaperModel);
-        }
+        //    return View(magazineModel);
+        //}
 
-        private BooksFilterModel InitializeBooks(BooksFilterModel model)
-        {
-            List<string> bookPublisherList = homeService.GetBooksPublishers();
+        //[HttpGet]
+        //public ActionResult Newspapers(string newspaperPublisher)
+        //{
+        //    NewspaperFilterModel newspaperModel = new NewspaperFilterModel();
+        //    InitializeNewspapers(newspaperModel);
+        //    newspaperModel = CheckNewspapersPublisher(newspaperModel, newspaperPublisher);
 
-            model.BooksPublisher = new SelectList(bookPublisherList);
-            model.Books = new List<Book>();
+        //    return View(newspaperModel);
+        //}
 
-            return model;
-        }
+        //private BooksFilterModel InitializeBooks(BooksFilterModel model)
+        //{
+        //    List<string> bookPublisherList = homeService.GetBooksPublishers();
 
-        private BukletsFilterModel InitializeBuklets(BukletsFilterModel model)
-        {
-            List<string> bukletPublisherList = homeService.GetBukletsPublishers();
+        //    model.BooksPublisher = new SelectList(bookPublisherList);
+        //    model.Books = new List<Book>();
 
-            model.BukletsPublisher = new SelectList(bukletPublisherList);
-            model.Buklets = new List<Buklet>();
+        //    return model;
+        //}
 
-            return model;
-        }
+        //private BukletsFilterModel InitializeBuklets(BukletsFilterModel model)
+        //{
+        //    List<string> bukletPublisherList = homeService.GetBukletsPublishers();
 
-        private MagazineFilterModel InitializeMagazines(MagazineFilterModel model)
-        {
-            List<string> magazinePublisherList = homeService.GetMagazinesPublishers();
+        //    model.BukletsPublisher = new SelectList(bukletPublisherList);
+        //    model.Buklets = new List<Buklet>();
 
-            model.MagazinesPublisher = new SelectList(magazinePublisherList);
-            model.Magazines = new List<Magazine>();
+        //    return model;
+        //}
 
-            return model;
-        }
+        //private MagazineFilterModel InitializeMagazines(MagazineFilterModel model)
+        //{
+        //    List<string> magazinePublisherList = homeService.GetMagazinesPublishers();
 
-        private NewspaperFilterModel InitializeNewspapers(NewspaperFilterModel model)
-        {
-            List<string> newspaperPublisherList = homeService.GetNewspapersPublishers();
+        //    model.MagazinesPublisher = new SelectList(magazinePublisherList);
+        //    model.Magazines = new List<Magazine>();
 
-            model.NewspapersPublisher = new SelectList(newspaperPublisherList);
-            model.Newspapers = new List<Newspaper>();
+        //    return model;
+        //}
 
-            return model;
-        }
+        //private NewspaperFilterModel InitializeNewspapers(NewspaperFilterModel model)
+        //{
+        //    List<string> newspaperPublisherList = homeService.GetNewspapersPublishers();
 
-        public BooksFilterModel CheckBooksPublisher(BooksFilterModel model, string bookPublisher)
-        {
-            List<Book> bookList = homeService.CheckBookPublisher(bookPublisher);
-            model.Books = bookList;
-            return model;
-        }
+        //    model.NewspapersPublisher = new SelectList(newspaperPublisherList);
+        //    model.Newspapers = new List<Newspaper>();
 
-        public BukletsFilterModel CheckBukletsPublisher(BukletsFilterModel model, string bukletPublisher)
-        {
-            List<Buklet> bukletList = homeService.CheckBukletPublisher(bukletPublisher);
-            model.Buklets = bukletList;
-            return model;
-        }
+        //    return model;
+        //}
 
-        public MagazineFilterModel CheckMagazinesPublisher(MagazineFilterModel model, string magazinePublisher)
-        {
-            List<Magazine> magazineList = homeService.CheckMagazinePublisher(magazinePublisher);
-            model.Magazines = magazineList;
-            return model;
-        }
+        //public BooksFilterModel CheckBooksPublisher(BooksFilterModel model, string bookPublisher)
+        //{
+        //    List<Book> bookList = homeService.CheckBookPublisher(bookPublisher);
+        //    model.Books = bookList;
+        //    return model;
+        //}
 
-        public NewspaperFilterModel CheckNewspapersPublisher(NewspaperFilterModel model, string newspaperPublisher)
-        {
-            List<Newspaper> newspaperList = homeService.CheckNewspaperPublisher(newspaperPublisher);
-            model.Newspapers = newspaperList;
-            return model;
-        }
+        //public BukletsFilterModel CheckBukletsPublisher(BukletsFilterModel model, string bukletPublisher)
+        //{
+        //    List<Buklet> bukletList = homeService.CheckBukletPublisher(bukletPublisher);
+        //    model.Buklets = bukletList;
+        //    return model;
+        //}
+
+        //public MagazineFilterModel CheckMagazinesPublisher(MagazineFilterModel model, string magazinePublisher)
+        //{
+        //    List<Magazine> magazineList = homeService.CheckMagazinePublisher(magazinePublisher);
+        //    model.Magazines = magazineList;
+        //    return model;
+        //}
+
+        //public NewspaperFilterModel CheckNewspapersPublisher(NewspaperFilterModel model, string newspaperPublisher)
+        //{
+        //    List<Newspaper> newspaperList = homeService.CheckNewspaperPublisher(newspaperPublisher);
+        //    model.Newspapers = newspaperList;
+        //    return model;
+        //}
+
+
+
+        /*
+         *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         * *
+         *          
+         */
+
+
+
+
+
+
+
+
+
+
 
         //public ActionResult SaveBooksTxtList()
         //{
@@ -175,54 +212,54 @@ namespace LibraryProject.Controllers
         //    return RedirectToAction("Magazines");
         //}
 
-        [HttpPost]
-        [Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
-        public ActionResult CreateBook(Book book)
-        {
-            if (book.Price < 0)
-            {
-                ModelState.AddModelError("Price", "Price should be positive");
-            }
-            if (ModelState.IsValid)
-            {
-                homeService.AddBook(book);
+        //[HttpPost]
+        //[Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
+        //public ActionResult CreateBook(Book book)
+        //{
+        //    if (book.Price < 0)
+        //    {
+        //        ModelState.AddModelError("Price", "Price should be positive");
+        //    }
+        //    if (ModelState.IsValid)
+        //    {
+        //        homeService.AddBook(book);
 
-                return Json(book);
-            }
-            return Json(HttpStatusCode.NotModified);
-        }
+        //        return Json(book);
+        //    }
+        //    return Json(HttpStatusCode.NotModified);
+        //}
 
-        [HttpPost]
-        [Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
-        public ActionResult EditBook(int? Id, Book newBook)
-        {
-            if (Id == null)
-            {
-                return HttpNotFound();
-            }
-            if (newBook.Price < 0)
-            {
-                ModelState.AddModelError("Price", "Price should be positive");
-            }
-            if (ModelState.IsValid)
-            {
-                homeService.UpdateBook(Id, newBook);
-                return Json(newBook);
-            }
-            return Json(HttpStatusCode.NotModified);
-        }
+        //[HttpPost]
+        //[Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
+        //public ActionResult EditBook(int? Id, Book newBook)
+        //{
+        //    if (Id == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    if (newBook.Price < 0)
+        //    {
+        //        ModelState.AddModelError("Price", "Price should be positive");
+        //    }
+        //    if (ModelState.IsValid)
+        //    {
+        //        homeService.UpdateBook(Id, newBook);
+        //        return Json(newBook);
+        //    }
+        //    return Json(HttpStatusCode.NotModified);
+        //}
 
-        [HttpPost]
-        [Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
-        public ActionResult DeleteBook(int? id)
-        {
-            if (id == null)
-            {
-                return HttpNotFound();
-            }
-            homeService.DeleteBook(id);
-            return Json(HttpStatusCode.OK);
-        }
+        //[HttpPost]
+        //[Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
+        //public ActionResult DeleteBook(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    homeService.DeleteBook(id);
+        //    return Json(HttpStatusCode.OK);
+        //}
 
         [HttpPost]
         [Authorize(Roles = IdentityConfiguration._ADMIN_ROLE)]
